@@ -23,7 +23,7 @@ import siamese_fc1
 
 
 def train_and_dump(model, optimizer, labeled_data_dict, unlabeled_data_dict,\
-        xp, batchsize, epoch, plot_dim, gpu, outputdim):
+        xp, batchsize, epoch, plot_dim, gpu, outputdim, d_name):
     x_train = labeled_data_dict['data']
     y_train = labeled_data_dict['target']
     n_train = len(y_train)
@@ -135,6 +135,6 @@ if __name__ == '__main__':
 
     print('training and test')
     train_and_dump(model, optimizer, ld_dict, unld_dict, xp, args.batchsize,\
-            args.epoch, args.plot_dim, args.gpu, args.outputdim)
+            args.epoch, args.plot_dim, args.gpu, args.outputdim, args.d_name)
     print('end')
     print('elapsed time[m]:', (time.clock() - st)/60.0)
