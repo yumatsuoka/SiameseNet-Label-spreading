@@ -23,10 +23,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     print('label_spreading Load dataset')
-    label_data = pickle.load(open('./dump/{}_label.vector'.format(args.d_name)))
-    label_target = pickle.load(open('./dump/{}_label.target'.format(args.d_name)))
-    nolabel_data = pickle.load(open('./dump/{}_unlabel.vector'.format(args.d_name)))
-    nolabel_target = pickle.load(open('./dump/{}_unlabel.target'.format(args.d_name)))
+    label_data = pickle.load(open('../dump/{}_label.vector'.format(args.d_name)))
+    label_target = pickle.load(open('../dump/{}_label.target'.format(args.d_name)))
+    nolabel_data = pickle.load(open('../dump/{}_unlabel.vector'.format(args.d_name)))
+    nolabel_target = pickle.load(open('../dump/{}_unlabel.target'.format(args.d_name)))
 
     print('Make dataset and target')
     n_testlabel = len(nolabel_target)
