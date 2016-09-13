@@ -29,6 +29,7 @@ def dump_feature_vector(model, d_name, dic, outputdim, batchsize, xp, gpu, n_plo
 
 def make_plot(data, target, d_name, n_plot=None):
     print('plot vectors')
+    plt.clf()
     c = ['#ff0000','#0000ff','#d16b16','#00984b','#0074bf',
             '#c30068','#6d1782', '#546474', '#244765', '#8f253b']
     c_markers = ['s', 'v', 'o', 'd', '*', '+', 'H', 'p', 'x', 'D']
